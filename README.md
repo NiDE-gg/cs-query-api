@@ -84,10 +84,25 @@ To pull and use the pre-built image:
 
 ```bash
 # Pull the image
-docker pull ghcr.io/yourusername/cs-query-api:latest
+docker pull ghcr.io/nide-gg/cs-query-api:latest
 
 # Run the container
-docker run -p 3000:3000 ghcr.io/yourusername/cs-query-api:latest
+docker run -p 3000:3000 ghcr.io/nide-gg/cs-query-api:latest
+```
+
+### Docker Compose
+
+A `docker-compose.yml` file is included for easy deployment:
+
+```bash
+# Start the service
+docker-compose up -d
+
+# View logs
+docker-compose logs -f
+
+# Stop the service
+docker-compose down
 ```
 
 > **Note**: Repository names in Docker tags must be lowercase. If your GitHub username contains uppercase letters, use the lowercase version in the commands above.

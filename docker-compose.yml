@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  cs-query-api:
+    image: ghcr.io/nide-gg/cs-query-api:latest
+    container_name: cs-query-api
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    environment:
+      - PORT=3000

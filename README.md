@@ -90,12 +90,14 @@ docker pull ghcr.io/yourusername/cs-query-api:latest
 docker run -p 3000:3000 ghcr.io/yourusername/cs-query-api:latest
 ```
 
+> **Note**: Repository names in Docker tags must be lowercase. If your GitHub username contains uppercase letters, use the lowercase version in the commands above.
+
 ## GitHub Actions
 
 This repository includes a GitHub Actions workflow that:
 
 1. Builds the Docker image
-2. Pushes it to GitHub Container Registry
+2. Pushes it to GitHub Container Registry with lowercase repository name
 3. Tags images with both `latest` and the commit SHA
 
 The workflow runs automatically on pushes to the `main` branch.
